@@ -4,19 +4,24 @@
 }
 body{
   font-family:Verdana;
-  background-color: rgb(30, 20, 49);
-  color: azure;
+  background-color: #002345;
+  color: #ABCDEF;
 }
 h1{
   text-align: center;
-  margin: 40px 0;
+  margin: 80px 0;
+  color: white;
+}
+legend{
+  font-size: 2em;
 }
 fieldset{
   width: 350px;
   margin: 0 auto;
   text-align: center;
   border-radius: 5px;
+  padding: 10px;
 }
 h2{
-  font-size: 3em;
+  font-size: 7em;
 }
