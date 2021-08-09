@@ -1,16 +1,30 @@
-let mostarReloj = document.getElementById('reloj');
-let mostraFecha = document.getElementById('fecha');
+// setTimeout - ejecuta una función DESPUÉS de cierto tiempo
 
-let fecha = new Date();
+function saludo(nombre){
+  console.log(`Hola ${nombre}, buenos dias`);
+}
 
-let diaSemana = ['Domingo','Lunes', 'Martes','Miércoles','Jueves','Viernes','Sábado'];
+let temporizador = setTimeout(saludo, 2000, 'David');
 
-let mesAnyo = ['Enero','Febrero', 'Marzo','abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+clearTimeout(temporizador);
 
-mostraFecha.innerHTML = `${diaSemana[fecha.getDay()]}, ${fecha.getDate()} de ${mesAnyo[fecha.getMonth()]} de ${fecha.getFullYear()}`;
+// setInterval - ejecuta una función CADA cierto tiempo
+/*
+let number = 5;
+let lanzamiento = setInterval(()=>{
+  console.log(`lanzamiento en ${number} segundos`);
+  number--;
+  if (number == 0){
+    clearInterval(lanzamiento);
+  }
+}, 1000);
+*/
 
+// setTimeout anidado
+let numero = 0;
 
-setInterval(()=>{
-  let hora = new Date();
-  mostarReloj.innerHTML = hora.toLocaleTimeString();
-},1000)
+let incrementoID = setTimeout(function incremento(){
+  console.log(numero);
+  numero++
+  incrementoID = setTimeout(incremento,1000);
+},1000);
