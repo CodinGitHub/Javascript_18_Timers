@@ -4,12 +4,12 @@ function saludo(nombre){
   console.log(`Hola ${nombre}, buenos dias`);
 }
 
-let temporizador = setTimeout(saludo, 2000, 'David');
+let temporizadorID = setTimeout(saludo, 2000, 'David');
 
-clearTimeout(temporizador);
+clearTimeout(temporizadorID);
 
 // setInterval - ejecuta una función CADA cierto tiempo
-/*
+
 let number = 5;
 let lanzamiento = setInterval(()=>{
   console.log(`lanzamiento en ${number} segundos`);
@@ -18,7 +18,7 @@ let lanzamiento = setInterval(()=>{
     clearInterval(lanzamiento);
   }
 }, 1000);
-*/
+
 
 // setTimeout anidado
 let numero = 0;
